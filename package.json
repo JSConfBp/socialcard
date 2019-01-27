@@ -1,0 +1,25 @@
+{
+  "name": "socialcards.jsconfbp.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "predev": "npm install",
+    "dev": "npx nodemon index.js",
+    "postdev": "rm -rf node_modules",
+    "build": "npx netlify-lambda build src/lambda"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-aws-lambda": "1.11.1",
+    "netlify-lambda": "^1.3.0",
+    "puppeteer-core": "1.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

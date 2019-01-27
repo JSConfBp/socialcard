@@ -1,0 +1,12 @@
+---
+version: '2'
+
+services:
+  socialcard:
+    ports: # ports to bind to "outer:inner", outer is what you'll type in the browser
+      - "8080:8080"   # HTTP port
+    volumes:
+      - .:/usr/src/socialcard
+    image: node:10-alpine
+    working_dir: /usr/src/socialcard
+    command: ["npm", "run", "dev"]
